@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,11 +10,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script> -->
-  </head>
+<script src="libraries/p5.sound.min.js"></script> -->
+</head>
 
-  <body>
-    <canvas id="canvas" width="800px" height="500px"></canvas>
+<body>
+    <div class="container">
+        <div class="slidecontainer velo">
+            <span>velocity</span>
+            <input type="range" tooltip="velocity" min="10" max="100" value="25" class="slider" id="vel">
+        </div>
+
+        <canvas id="canvas" width="800px" height="500px"></canvas>
+        <div class="slidecontainer mr">
+            <input type="range" min="0.01" max="0.5" value="0.02" step="0.01" class="slider" id="mutation_rate">
+            <br><span>Mutation Rate</span>
+        </div>
+    </div>
     <script src="sketch.js"></script>
-  </body>
+</body>
+
 </html>

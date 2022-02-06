@@ -1,12 +1,74 @@
-html, body {
-  margin: 0;
-  padding: 0;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 30px;
 }
 
-canvas {
-  background-color: #AA9D94;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.container {
+    background-color: #AA9D94;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.velo span {
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    transform: rotate(-180deg) translate(-300px, calc((-400px + 50%)));
+}
+
+#vel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, calc(400px - 50%));
+}
+
+.mr span {
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    transform: translate(200px, calc(-400px));
+}
+
+#mutation_rate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, calc(-400px + 150%));
+}
+
+.slidecontainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+input {
+    -webkit-appearance: none;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    width: 100%;
+}
+
+input:hover {
+    opacity: 1;
+}
+
+input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #635346;
+    cursor: pointer;
 }
